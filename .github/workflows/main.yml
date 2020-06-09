@@ -26,7 +26,7 @@ jobs:
 
     # Runs a set of commands using the runners shell
     - name: Install npm
-      run: pascalgn/npm-publish-action@1.2.0
+      run: JS-DevTools/npm-publish@v1
     
     - name: Delploy on Surge
       run: surge ./build my-profile.surge.sh --token @{{ secrets:MY_PROFILE }}
