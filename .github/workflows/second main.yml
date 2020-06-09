@@ -33,5 +33,7 @@ jobs:
     - name: build app
       run: npm run build
     
-    - name: deploy surge
-      run: surge ./build my-profile.surge.sh --token @{{ secrets:MY_PROFILE }}
+    - name: Publish to surge.sh
+      uses: dswistowski/surge-sh-action@v1.0.0
+      
+    - run: surge ./build my-profile.surge.sh --token @{{ secrets:MY_PROFILE }}
