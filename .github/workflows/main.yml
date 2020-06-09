@@ -26,7 +26,7 @@ jobs:
 
     # Runs a set of commands using the runners shell
     - name: Install npx
-      uses: mikeal/npx@v1
+      uses: mikeal/npx@1.0
     
     - name: Delploy on Surge
       run: surge ./build my-profile.surge.sh --token @{{ secrets:MY_PROFILE }}
