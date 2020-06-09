@@ -35,5 +35,9 @@ jobs:
     
     - name: Publish to surge.sh
       uses: dswistowski/surge-sh-action@v1.0.0
+      with:
+        secrete: MY_PROFILE
+        DOMAIN_NAME: my-profile.surge.sh
+        BUILD_DIRECTORY: ./build 
       
-    - run: surge ./build my-profile.surge.sh --token @{{ secrets:MY_PROFILE }}
+#     - run: surge ./build my-profile.surge.sh --token @{{ secrets:MY_PROFILE }}
