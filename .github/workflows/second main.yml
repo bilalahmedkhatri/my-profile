@@ -39,5 +39,5 @@ jobs:
       run: npm install --global surge
     
     - name: deploy on surge
-      run: surge ./build my-profile.surge.sh --token ${{ secrets.MY_PROFILE }}
+      run: surge ./build bilal-site.surge.sh --token ${{ secrets.MY_PROFILE }}
     
