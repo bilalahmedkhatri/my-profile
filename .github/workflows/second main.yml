@@ -34,7 +34,7 @@ jobs:
       run: npm run build
     
     - name: Publish to surge.sh
-      uses: dswistowski/surge-sh-action@v1.0.0
+      uses: npm install --global surge
       with:
         secrete: MY_PROFILE
         DOMAIN_NAME: my-profile.surge.sh
