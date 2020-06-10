@@ -35,9 +35,7 @@ jobs:
     
     - name: Publish to surge.sh
       uses: npm install --global surge
-      with:
-        secrete: MY_PROFILE
-        DOMAIN_NAME: my-profile.surge.sh
-        BUILD_DIRECTORY: ./build 
-      
-#     - run: surge ./build my-profile.surge.sh --token @{{ secrets:MY_PROFILE }}
+    
+    - name: deploy on surge
+      run: surge ./build my-profile.surge.sh --token ${{ secrets.MY_PROFILE }}
+    
